@@ -89,4 +89,9 @@ async function scrape() {
 	}
 }
 
-module.exports = () => setInterval(scrape, config.interval);
+
+
+module.exports = () => {
+	scrape();
+	setInterval(scrape, config.interval)
+}
