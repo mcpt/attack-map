@@ -50,11 +50,12 @@ function parseLogs(logs) {
 }
 
 async function scrape() {
-	logger.info('Looking for links...');
+	logger.info('Starting sync');
+	logger.info('Looking for links');
 	let links = await getLinks((await axios.get(config.endpoint)).data);
 	let ips = new Set();
 
-	if (links.length == 0) return logger.info('No new links found.')
+	if (links.length == 0) return logger.info('No new links found')
 
 	for (let link of links) {
 		logger.info(`Fetching ${link}`);
@@ -87,8 +88,9 @@ async function scrape() {
 			await Coordinates.create({ longitude, latitude, count: 1 });
 		}
 	}
-}
 
+	logger.info('Finished sync');
+}
 
 
 module.exports = () => {
