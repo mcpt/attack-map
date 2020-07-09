@@ -1,0 +1,7 @@
+<!DOCTYPE html><html><head><title>MCPT Attack Map</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"><style>*{font-family:Poppins,sans-serif;margin:0}body{background-color:#272822}.absCenter{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}#aboutLink{color:#fff}#map{width:100vw;height:95vh}#footer{position:absolute;bottom:0;z-index:2;display:flex;align-items:center;justify-content:center;width:100vw;height:5vh}#about{padding:20px;min-width:300px;max-width:500px;border:1px solid #d3d3d3;z-index:2;background-color:#fff}#closeButton{display:block;margin:auto}</style></head><body>
+<div id="about" class="absCenter" hidden> <h1>About</h1> <p> MCPT attack map is a little page that tabulates the countries that we have seen internet scanners from. <br><br> The data is tabulated from our server logs obtained through <a href="https://github.com/mcpt/karby">Karby</a>. <br><br> This product includes GeoLite2 data created by MaxMind, available from <a href="https://www.maxmind.com">https://www.maxmind.com</a>. </p> <br> <button id="closeButton" onclick="document.getElementById('about').hidden = true">Close</button>
+</div>
+<div id="map" class="absCenter"></div>
+<div id="footer"> <span><a id="aboutLink" href="#" onclick="document.getElementById('about').hidden = false">What's this?</a></span>
+</div>
+</body><script src="/js.ad01d630.js"></script></html>
