@@ -3,9 +3,7 @@ import * as am4maps from "@amcharts/amcharts4/maps";
 import am4geodata_worldLow from "@amcharts/amcharts4-geodata/worldLow";
 import countries from './countries.js'
 
-const endpoint = 'http://localhost:9080/data';
-
-fetch(endpoint)
+fetch('/data')
 .then(data => data.json())
 .then(data => {
 	let map = am4core.create("map", am4maps.MapChart);
